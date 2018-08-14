@@ -1,0 +1,19 @@
+
+<p>Find me in app/views/games/new.html.erb</p>
+<h1>New Game!</h1>
+<div class="new">
+  <ul class="letters" style= "list-style-type:none;">
+    <% @letters.each do |i| %>
+      <li>
+        <%= i.capitalize %>
+      </li>
+    <%end %>
+  </ul>
+</div>
+<div class="input">
+  <form action="/score" method="get">
+    <input type="text" name="word" placeholder="Whats the longest word you can build?" id="enter">
+    <input type="submit">
+  </form>
+</div>
+
